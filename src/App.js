@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Landing from './components/pages/Landing';
+import Nav from './components/Nav';
+import About from './components/pages/About';
+import ReactPageScroller from "react-page-scroller";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="pages-container">
+      <img className="overlay" src="./images/black.jpg" alt="texture"/>
+      <img className="texture" src="./images/Spiral.jpg" alt="texture"/>
+      <Nav/>
+      <ReactPageScroller ref={c => c.reactPageScroller = c}>
+          <Landing />
+          <About />
+      </ReactPageScroller>
     </div>
   );
 }
