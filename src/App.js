@@ -5,7 +5,10 @@ import About from './components/pages/About';
 import ReactPageScroller from "react-page-scroller";
 
 function App() {
-
+  window.addEventListener('scroll',(e)=>{
+    let y= window.scrollY;
+    console.log('test');
+  })
   return (
     <div className="pages-container">
       <img className="overlay" src="./images/black.jpg" alt="texture"/>

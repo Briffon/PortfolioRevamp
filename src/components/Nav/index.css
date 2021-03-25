@@ -7,7 +7,6 @@
     height: 10vh;
     position: fixed;
     width: 100%;
-    border: 2px solid red;
     z-index: 1;
 }
 

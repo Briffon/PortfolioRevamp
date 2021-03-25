@@ -11,6 +11,9 @@ function Carousel(props) {
     const switchPage=(e,page)=>{
         e.preventDefault();
         setPage(page);
+
+        document.getElementsByClassName('active')[0].classList.remove('active');
+        document.getElementsByClassName('carousel-container__buttons-button')[page].classList.add('active');
     }
 
     const next =(e)=>{
@@ -25,6 +28,9 @@ function Carousel(props) {
             if(!props.items[next+1]){
                 document.getElementsByClassName('carousel-container__pagination-next')[0].classList.add('disable');
             }
+
+            document.getElementsByClassName('active')[0].classList.remove('active');
+            document.getElementsByClassName('carousel-container__buttons-button')[next].classList.add('active');
         }
     }
 
@@ -40,14 +46,15 @@ function Carousel(props) {
             if(!props.items[previous-1]){
                 document.getElementsByClassName('carousel-container__pagination-previous')[0].classList.add('disable');
             }
+
+            document.getElementsByClassName('active')[0].classList.remove('active');
+            document.getElementsByClassName('carousel-container__buttons-button')[previous].classList.add('active');
         }
     }
 
     return (
         <div style={{width:props.width, height:props.height}} className={`${props.className ? props.className :null} carousel-container`}>
-            <div className="carousel-container__item">
-                <p>{props.items[page].title}</p>
-            </div>
+            {props.items[page].html}
             {/* {props.items ? props.items.map((item,id)=>{
                 if(id!==0){
                     return(
@@ -66,14 +73,20 @@ function Carousel(props) {
             
             <div className="carousel-container__buttons">
                 {props.items ? props.items.map((button,id)=>{
-                    return(
-                        <Button onClick={e=>switchPage(e,id)} key={id} className="carousel-container__buttons-button" content={button.title}/>
-                    )
+                    if(id===0){
+                        return(
+                            <Button onClick={e=>switchPage(e,id)} key={id} className="active carousel-container__buttons-button" content={button.title}/>
+                        )
+                    }else{
+                        return(
+                            <Button onClick={e=>switchPage(e,id)} key={id} className="carousel-container__buttons-button" content={button.title}/>
+                        )
+                    }
                 }):null}
             </div>
 
             <div carousel-container__pagination>
-                <button onClick={e=>previous(e)} className=" disable carousel-container__pagination-previous">{`<`}</button>
+                <button onClick={e=>previous(e)} className="disable carousel-container__pagination-previous">{`<`}</button>
                 <button onClick={e=>next(e)} className="carousel-container__pagination-next">{`>`}</button>
             </div>
         </div>

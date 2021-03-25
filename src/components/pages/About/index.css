@@ -1,0 +1,9 @@
+.about-container__about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-container__about-me h2{
+    margin-bottom: 3rem;
+}
