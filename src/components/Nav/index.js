@@ -1,34 +1,8 @@
-import React,{useEffect} from 'react';
-import { Events, animateScroll as scroll } from "react-scroll";
+import React from 'react';
+import { animateScroll as scroll } from "react-scroll";
 import './index.css';
 
 function Nav() {
-
-    // window.addEventListener('scroll',function(e){
-    //     e.preventDefault();
-    //     let position = window.scrollY;
-
-    //     if(position>0 && position<972){
-    //         console.log('test');
-
-    //         scroll.scrollTo('about',{
-    //             duration:1500,
-    //             delay:100,
-    //             smooth:true,
-    //             containerId:'about'
-    //         });
-    //     }
-
-    //     // switch(position){
-    //     //     case position>0 && position<972:
-    //     //         scroll.scrollTo(972);
-    //     //         console.log(position);
-    //     //     break;
-
-    //     //     default:
-    //     //     break;
-    //     // }
-    // })
 
     const scrollTo=(e,post)=>{
         e.preventDefault();

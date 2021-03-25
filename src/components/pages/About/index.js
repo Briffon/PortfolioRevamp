@@ -6,9 +6,9 @@ function About() {
     return (
         <Carousel width='100%' height='100vh' className="page about-container" items={
                 [
-                    {title:'test'},
-                    {title:'test2'},
-                    {title:'test3'}
+                    {title:'About'},
+                    {title:'Technologies'},
+                    {title:'Services'}
                 ]
             }
         />
