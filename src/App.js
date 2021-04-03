@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ReactFullpage from "@fullpage/react-fullpage";
+import Nav from "./components/Nav";
+import Landing from "./components/Pages/Landing";
+import About from "./components/Pages/About";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="portfolio-container">
+      <img className="overlay" src="./images/black.jpg" alt="texture" />
+      <img className="texture" src="./images/Spiral.jpg" alt="texture" />
+      <ReactFullpage
+        anchors={[
+          "firstPage",
+          "secondPage",
+          "thirdPage",
+          "fourthPage",
+          "lastPage",
+        ]}
+        slidesNavigation={true}
+        scrollOverflow={true}
+        scrollBar={true}
+        licenseKey={"A7DBD34E-73DB4778-A858A699-0C1DEE01"}
+        fixedElements="#myMenu"
+        menu={true}
+        render={() => {
+          return (
+            <>
+              <Nav />
+              <Landing />
+              <About />
+              <div className="section">Test3</div>
+            </>
+          );
+        }}
+      />
     </div>
   );
 }

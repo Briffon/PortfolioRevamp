@@ -1,38 +1,175 @@
-.App {
-  text-align: center;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-family: "Oxanium", cursive;
 }
 
-.App-header {
-  background-color: #282c34;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
   min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow: hidden;
+  color: white !important;
 }
 
-.App-link {
-  color: #61dafb;
+.portfolio-container {
+  background: url("./backgrounds/Background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.texture {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 15% 15%;
+  padding: 0;
+  margin: 0;
+  z-index: -2;
+  opacity: 0.85;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  animation-name: zoom;
+  animation-timing-function: ease;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.35;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.5);
   }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Font Sizes */
+
+h1 {
+  font-size: 72px;
+  font-weight: 100;
+}
+
+li {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 400;
 }

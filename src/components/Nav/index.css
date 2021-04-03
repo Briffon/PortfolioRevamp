@@ -1,0 +1,34 @@
+#myMenu {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  margin: 0 !important;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container-logo {
+  height: 75px;
+}
+
+.myMenu__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.myMenu__links img {
+  width: 75px;
+}
+
+.myMenu__links a {
+  text-decoration: none;
+  margin-right: 1rem;
+  color: white !important;
+  font-size: 1.3em;
+}
