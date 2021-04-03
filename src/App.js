@@ -1,8 +1,9 @@
 import "./App.css";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Nav from "./components/Nav";
-import Landing from "./components/Pages/Landing";
-import About from "./components/Pages/About";
+import Landing from "./components/pages/Landing";
+import About from "./components/pages/About";
+import Portfolio from "./components/pages/Portfolio";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Nav />
               <Landing />
               <About />
+              <Portfolio />
               <div className="section">Test3</div>
             </>
           );
