@@ -1,12 +1,17 @@
-import React from 'react';
-import './index.css';
+import React from "react";
+import "./index.css";
 
 function Button(props) {
-    return (
-        <div onClick={props.onClick} className="button-container">
-            {props.content}
-        </div>
-    )
+  return (
+    <button
+      style={{ width: props.width, height: props.height }}
+      className={`button-container ${props.className}`}
+      onClick={props.onClick}
+    >
+      {props.content}
+    </button>
+  );
 }
 
-export default Button
+export default Button;
+
