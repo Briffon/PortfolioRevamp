@@ -1,0 +1,51 @@
+.project__container {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: -1px 1px 4px 0px rgba(94, 94, 94, 0.15);
+  -moz-box-shadow: -1px 1px 4px 0px rgba(94, 94, 94, 0.15);
+  box-shadow: -1px 1px 4px 0px rgba(94, 94, 94, 0.15);
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 1rem;
+  position: relative;
+  padding: 1rem;
+  align-items: center;
+}
+
+.project__container h3 {
+  max-width: 85%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.project__container span {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.project__container img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  padding: 0;
+  margin: 0;
+  border-radius: 1rem;
+}
+
+.project__container p {
+  text-align: left;
+  margin-top: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+.project__container button {
+  position: absolute;
+  bottom: 0.3rem;
+  right: -1.5rem;
+}
