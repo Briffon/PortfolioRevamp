@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Landing from "./components/pages/Landing";
 import About from "./components/pages/About";
 import Portfolio from "./components/pages/Portfolio";
+import Contact from "./components/pages/Contact";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Landing />
               <About />
               <Portfolio />
+              <Contact />
               <div className="section">Test3</div>
             </>
           );
